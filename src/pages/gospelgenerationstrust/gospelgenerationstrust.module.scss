@@ -1,0 +1,34 @@
+h1, h2, h3 {
+    font-family: "Klinic Slab";
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.givingFormIntroduction {
+    background-color: aqua;
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.introduction {
+    grid-area: content;
+}
+
+.pullquote {
+    grid-area: content;
+    font-weight: 700;
+    font-size: 2.5em;
+    width: 75%;
+    line-height: 1.2em;
+
+    border-left-color: var(--dark-colour);
+    border-left-width: 7px;
+    border-left-style: solid;
+    padding-left: var(--general-padding);
+}
+
+.alums {
+    grid-area: content;
+}

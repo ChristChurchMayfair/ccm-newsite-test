@@ -189,6 +189,10 @@
     @include logo;
 
     grid-area: logo;
+    justify-self: start;
+    svg {
+        width: 100%;
+    }
 }
 
 .menuContent {

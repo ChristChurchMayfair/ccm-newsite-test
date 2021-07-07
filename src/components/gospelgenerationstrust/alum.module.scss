@@ -1,0 +1,40 @@
+.alum {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "photo info";
+    column-gap: var(--general-padding);
+    margin-bottom: var(--general-padding);
+}
+
+.photo {
+    grid-area: photo;
+}
+
+.info {
+    display: grid;
+    grid-area: info;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titleline" "bio";
+}
+
+.titleline {
+    grid-area: titleline;
+}
+
+.name {
+    font-weight: 400;
+}
+
+.years {
+    &:before { 
+        content: " (",
+    }
+    &:after { 
+        content: ") - ",
+    }
+}
+
+.bio {
+    grid-area: bio;
+}
