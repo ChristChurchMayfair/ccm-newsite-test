@@ -10,11 +10,13 @@ features:
           You can also check out our blog for some daily encouragement.
       buttonText: CCM Blog
       buttonHref: "http://blog.christchurchmayfair.org"
+      isLinkExternal: true
     - title: Some further comments
       description: |
           Read some more detailed comments on the coronavirus situation from Matt Fuller.
       buttonText: Read more
       buttonHref: "/covid19/"
+      isLinkExternal: false
 ---
 
 In the light of Government advice, all Church meetings will now be online.

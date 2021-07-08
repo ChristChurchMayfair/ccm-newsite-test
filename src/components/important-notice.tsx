@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import { Link } from "gatsby"
 
 import styles from "./important-notice.module.scss"
 import Section from "./section"
@@ -7,8 +8,9 @@ import SectionText from "./section-text"
 export interface Feature {
     title: string
     description: string
-    buttonText?: string
-    buttonHref?: string
+    buttonText: string
+    buttonHref: string
+    isLinkExternal: boolean
 }
 
 interface ImportantNoticeProps {
@@ -50,6 +52,7 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
                                         description,
                                         buttonText,
                                         buttonHref,
+                                        isLinkExternal,
                                     },
                                     i
                                 ) => (
@@ -58,7 +61,7 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
                                         <div>
                                             <p>{description}</p>
                                         </div>
-                                        {buttonText !== undefined && (
+                                        {isLinkExternal ? (
                                             <a
                                                 className={
                                                     styles.featureLinkButton
@@ -67,6 +70,13 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
                                             >
                                                 {buttonText}
                                             </a>
+                                        ) : (
+                                            <Link
+                                                className="button"
+                                                to={buttonHref}
+                                            >
+                                                {buttonText}
+                                            </Link>
                                         )}
                                     </div>
                                 )

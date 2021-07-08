@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+
 import ImportantNotice, { Feature } from "./important-notice"
 
 const Covid19 = () => {
@@ -16,6 +17,7 @@ const Covid19 = () => {
                         description
                         buttonText
                         buttonHref
+                        isLinkExternal
                     }
                 }
                 html
